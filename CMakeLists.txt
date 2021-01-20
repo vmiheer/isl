@@ -411,6 +411,18 @@ add_test(NAME codegen_test
   COMMAND "${ISL_BINARY_DIR}/codegen_test.sh"
 )
 
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file(
+    IslConfigVersion.cmake
+    VERSION 0.23
+    COMPATIBILITY SameMajorVersion
+    )
+
+configure_package_config_file(
+  cmake/islConfig.cmake.in
+  ${CMAKE_BINARY_DIR}/islConfig.cmake
+  INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lib
+
 include(GNUInstallDirs)
 install(TARGETS isl
   EXPORT islTargets

@@ -1,0 +1,6 @@
+include(CMakeFindDependencyMacro)
+find_dependency(Gmp)
+
+@PACKAGE_INIT@
+
+check_required_components(isl)
