@@ -421,7 +421,7 @@ write_basic_package_version_file(
 configure_package_config_file(
   cmake/islConfig.cmake.in
   ${CMAKE_BINARY_DIR}/islConfig.cmake
-  INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lib
+  INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lib)
 
 include(GNUInstallDirs)
 install(TARGETS isl
